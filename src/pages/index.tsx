@@ -1,6 +1,5 @@
 import { useEffect, FC, useState } from 'react'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 
 import { auth } from '../utils/firebase'
 

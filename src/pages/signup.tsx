@@ -3,7 +3,7 @@ import Router, { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import { auth } from '../utils/firebase'
-// import { AuthContext } from '../auth/AuthProvider'
+import { AuthContext } from '../auth/AuthProvider'
 
 const SignUp: FC = () => {
   const router = useRouter()
