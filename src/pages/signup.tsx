@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import Router, { useRouter } from 'next/router'
 import Link from 'next/link'
-
 import { auth } from '../utils/firebase'
 import { AuthContext } from '../auth/AuthProvider'
 
@@ -17,6 +16,7 @@ const SignUp: FC = () => {
   }, [])
 
   const createUser = async (e) => {
+    console.log(auth);
     e.preventDefault()
     try {
       await auth.createUserWithEmailAndPassword(email, password)

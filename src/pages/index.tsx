@@ -1,11 +1,11 @@
 import { useEffect, FC, useState } from 'react'
 import { useRouter } from 'next/router'
-
 import { auth } from '../utils/firebase'
 
 const Home: FC = (props: any) => {
   const router = useRouter()
   const [currentUser, setCurrentUser] = useState<null | object>(null)
+  const json = JSON.stringify(currentUser, null, 4);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -23,9 +23,12 @@ const Home: FC = (props: any) => {
   }
 
   return (
-    <div>
-      <pre>{currentUser && JSON.stringify(currentUser, null, 4)}</pre>
-      <button onClick={logOut}>Logout</button>
+    <div className="wrapper">
+      <div className="wrapper-inner">
+        <div className="hello">ログインしました</div>
+        <pre>{currentUser && JSON.stringify(currentUser, null, 4)}</pre>
+        <button onClick={logOut}>Logout</button>
+      </div>
     </div>
   )
 }
