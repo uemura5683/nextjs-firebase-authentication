@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "browserslist": "^4.16.5",
-    "css-loader": "^4.3.0",
     "date-fns": "^2.11.1",
     "firebase": "^11.2.0",
     "gray-matter": "^4.0.2",
